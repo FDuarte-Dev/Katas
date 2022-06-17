@@ -16,8 +16,8 @@ public class StepperModule {
         Coordinates coordinates = locationModule.getCoordinates();
 
         int Y = coordinates.getY();
-        if (Y == 9)
-            Y = 0;
+        if (Y == Board.NORTH_LIMIT)
+            Y = Board.SOUTH_LIMIT;
         else {
             Y++;
         }
@@ -30,8 +30,8 @@ public class StepperModule {
         Coordinates coordinates = locationModule.getCoordinates();
 
         int Y = coordinates.getY();
-        if (Y == 0)
-            Y = 9;
+        if (Y == Board.SOUTH_LIMIT)
+            Y = Board.NORTH_LIMIT;
         else {
             Y--;
         }
@@ -44,8 +44,8 @@ public class StepperModule {
         Coordinates coordinates = locationModule.getCoordinates();
 
         int X = coordinates.getX();
-        if (X == 9)
-            X = 0;
+        if (X == Board.EAST_LIMIT)
+            X = Board.WEST_LIMIT;
         else {
             X++;
         }
@@ -58,8 +58,8 @@ public class StepperModule {
         Coordinates coordinates = locationModule.getCoordinates();
 
         int X = coordinates.getX();
-        if (X == 0)
-            X = 9;
+        if (X == Board.WEST_LIMIT)
+            X = Board.EAST_LIMIT;
         else {
             X--;
         }

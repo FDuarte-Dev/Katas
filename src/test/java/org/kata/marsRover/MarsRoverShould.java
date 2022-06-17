@@ -15,8 +15,6 @@ public class MarsRoverShould {
 
     private MarsRover rover;
     @Mock
-    LocationModule locationModule;
-    @Mock
     MovementModule movementModule;
 
     @Before
