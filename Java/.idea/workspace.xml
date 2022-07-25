@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ba8b870-fded-4745-a304-3c81432c1db7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.idea.Katas.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/StepperModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/fizzBuzz/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/fizzBuzz/FizzBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/LocationModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/LocationModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/MarsRover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/MarsRover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/MovementModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/MovementModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/StepperModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/StepperModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/kata/marsRover/TurnerModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kata/marsRover/TurnerModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/fizzBuzz/FizzBuzzTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/fizzBuzz/FizzBuzzTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/DirectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/DirectionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/LocationModuleShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/LocationModuleShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/MarsRoverShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/MarsRoverShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/MovementModuleShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/MovementModuleShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/StepperModuleShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/StepperModuleShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/TurnerModuleShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/TurnerModuleShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/org/kata/marsRover/feature/ExecuteFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kata/marsRover/feature/ExecuteFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/fizzBuzz/FizzBuzz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/fizzBuzz/FizzBuzz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/Coordinates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/LocationModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/LocationModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/MarsRover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/MarsRover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/MovementModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/MovementModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/StepperModule$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/StepperModule$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/StepperModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/org/kata/marsRover/TurnerModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kata/marsRover/TurnerModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/fizzBuzz/FizzBuzzTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/fizzBuzz/FizzBuzzTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/DirectionTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/DirectionTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/LocationModuleShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/LocationModuleShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/MarsRoverShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/MarsRoverShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/MovementModuleShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/MovementModuleShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/StepperModuleShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/StepperModuleShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/TurnerModuleShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/TurnerModuleShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/org/kata/marsRover/feature/ExecuteFeature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kata/marsRover/feature/ExecuteFeature.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2CQkcxZRcZY0odAJEgySjEQU48l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/codurance/repo/training/Katas/Java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ba8b870-fded-4745-a304-3c81432c1db7" name="Changes" comment="" />
+      <created>1658742279964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658742279964</updated>
+    </task>
+    <servers />
+  </component>
+</project>
