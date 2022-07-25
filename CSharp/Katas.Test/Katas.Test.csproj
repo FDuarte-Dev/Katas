@@ -25,4 +25,8 @@
       <Compile Remove="UnitTest1.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Katas\Katas.csproj" />
+    </ItemGroup>
+
 </Project>
