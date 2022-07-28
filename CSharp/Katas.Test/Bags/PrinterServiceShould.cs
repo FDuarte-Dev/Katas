@@ -28,17 +28,24 @@ public class PrinterServiceShould
             items = Items
         };
 
-        printerService.PrintBag(bag);
+        PrinterService.PrintBag(bag);
         
         Assert.Equal(BackpackItemString, output.ToString());
     }
     
     [Fact]
-    public void PrintDurance()
+    public void PrintBags()
     {
-        var durance = new Durance();
+        var inventory = new Inventory()
+        {
+            Bags = new List<IBag>()
+            {
+                new Backpack(),
+                new MetalBag()
+            }
+        };
 
-        printerService.PrintDurance(durance);
+        PrinterService.PrintInventory(inventory);
         
         Assert.Equal(BackpackAndMetalString, output.ToString());
     }

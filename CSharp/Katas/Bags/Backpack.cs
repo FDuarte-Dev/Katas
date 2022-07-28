@@ -1,17 +1,9 @@
+using Katas.Test.Bags;
+
 namespace Katas.Bags;
 
-public class Backpack
+public class Backpack : Bag
 {
-    public string[] items { get; set; }
-    public BagType Type { get; private set; }
-
-    public Backpack()
-    {
-        Type = BagType.backpack;
-    }
-    
-    public override string ToString()
-    {
-        return $"{Type.ToString()} = ['{string.Join("', '", items)}']";
-    }
+    public Backpack() : base(BagType.BACKPACK)
+    { }
 }
