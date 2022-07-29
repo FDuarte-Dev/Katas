@@ -4,7 +4,7 @@ namespace Katas.Test.Bags.UseCase;
 
 public class DuranceIT
 {
-    [Fact]
+    [Fact(Skip = "Clean testing for pair")]
     public void OrganizeFiles()
     {
         var backpack = new Backpack()

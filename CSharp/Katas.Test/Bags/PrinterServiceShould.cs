@@ -33,7 +33,7 @@ public class PrinterServiceShould
         Assert.Equal(BackpackItemString, output.ToString());
     }
     
-    [Fact]
+    [Fact(Skip = "Clean testing for pair")]
     public void PrintBags()
     {
         var inventory = new Inventory()

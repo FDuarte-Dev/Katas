@@ -17,12 +17,8 @@ h
 	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
 L
 Katas.Test/Katas.Test.csproj,3/f/3fe254eacd97318c11f2fe977af7c381776eabd7
-D
-Katas.Test/Usings.cs,0/3/03ba1d5cbb66dfe243fddf44744f90da3ef9c3b0
 @
 Katas/Program.cs,e/d/ed205c47abaa1af47423cfc0f4d6c9ce8a89d269
-T
-$Katas.Test/Bags/UseCase/DuranceIT.cs,c/8/c8b019554b8d2b5a0efa2a8cf1579850b1cd7f82
 E
 Katas/Bags/Durance.cs,9/7/97e32e541a9c18626a652d1989cd9fd7c873e17b
 G
@@ -35,9 +31,13 @@ F
 Katas/Bags/Backpack.cs,0/6/065db00fa20d0e4c2e68562a0dfadb85f7b2da06
 B
 Katas/Bags/IBag.cs,f/4/f45210cba7a5c48ce21eaf502e78271b8831fb6a
-W
-'Katas.Test/Bags/PrinterServiceShould.cs,8/8/88dd23d03ae1ec80ca6384f8276acb460fc2aa8c
 L
 Katas/Bags/PrinterService.cs,5/8/58c8fc0234588dea29271483d5df15127ccb1854
 A
 Katas/Bags/Bag.cs,5/1/5124ea1428e7604adc48ffdc1cd94ffb982a83d9
+D
+Katas.Test/Usings.cs,0/3/03ba1d5cbb66dfe243fddf44744f90da3ef9c3b0
+T
+$Katas.Test/Bags/UseCase/DuranceIT.cs,c/8/c8b019554b8d2b5a0efa2a8cf1579850b1cd7f82
+W
+'Katas.Test/Bags/PrinterServiceShould.cs,8/8/88dd23d03ae1ec80ca6384f8276acb460fc2aa8c
