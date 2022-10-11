@@ -35,7 +35,7 @@ public class GuessingNumberGameShould
         var play = game.GuessNumber(guess);
 
         // Assert
-        play.Should().Be(Responses.GUESS_LOWER_THAN_CORRECT);
+        play.Should().Be(Responses.CORRECT_HIGHER_THAN_GUESS);
     }
     
     [Fact]
@@ -51,7 +51,7 @@ public class GuessingNumberGameShould
         var play = game.GuessNumber(guess);
 
         // Assert
-        play.Should().Be(Responses.GUESS_HIGHER_THAN_CORRECT);
+        play.Should().Be(Responses.CORRECT_LOWER_THAN_GUESS);
     }
 
     [Fact]

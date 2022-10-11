@@ -26,8 +26,8 @@ public class GuessingNumberGame: IGuessingNumberGame
             }
             
             return IsLower() 
-                ? Responses.GUESS_LOWER_THAN_CORRECT 
-                : Responses.GUESS_HIGHER_THAN_CORRECT;
+                ? Responses.CORRECT_LOWER_THAN_GUESS 
+                : Responses.CORRECT_HIGHER_THAN_GUESS;
         }
         finally
         {
@@ -38,6 +38,6 @@ public class GuessingNumberGame: IGuessingNumberGame
 
         bool IsLastTry() => CurrentGuess == 3;
 
-        bool IsLower() => guessedNumber < CorrectGuess;
+        bool IsLower() => CorrectGuess < guessedNumber;
     }
 }
