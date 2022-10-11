@@ -15,6 +15,11 @@ public class GuessingNumberGame: IGuessingNumberGame
         {
             return Responses.GUESS_LOWER_THAN_CORRECT;
         }
+
+        if (guessedNumber > CorrectGuess)
+        {
+            return Responses.GUESS_HIGHER_THAN_CORRECT;
+        }
         
         return Responses.CORRECT_GUESS;
     }

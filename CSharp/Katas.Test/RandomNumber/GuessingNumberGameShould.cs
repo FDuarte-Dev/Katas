@@ -36,5 +36,21 @@ public class GuessingNumberGameShould
 
         // Assert
         play.Should().Be(Responses.GUESS_LOWER_THAN_CORRECT);
-    } 
+    }
+    
+    [Fact]
+    public void NotifyPlayerWhenGuessingHigher()
+    {
+        // Arrange
+        const int correctGuess = 2;
+        var generator = new TestableRandomNumberGenerator(correctGuess);
+        var game = new GuessingNumberGame(generator);
+        const int guess = 3;
+
+        // Act
+        var play = game.GuessNumber(guess);
+
+        // Assert
+        play.Should().Be(Responses.GUESS_HIGHER_THAN_CORRECT);
+    }
 }
