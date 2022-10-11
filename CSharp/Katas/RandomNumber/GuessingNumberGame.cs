@@ -3,34 +3,41 @@ namespace Katas.RandomNumber;
 public class GuessingNumberGame: IGuessingNumberGame
 {
     private int CorrectGuess { get; }
+    public int CurrentGuess { get; set; }
     
     public GuessingNumberGame(RandomNumberGenerator generator)
     {
         CorrectGuess = generator.GetInt();
+        CurrentGuess = 1;
     }
 
     public string GuessNumber(int guessedNumber)
     {
-        if (IsLower())
+        try
         {
-            return Responses.GUESS_LOWER_THAN_CORRECT;
+            if (IsCorrect())
+            {
+                return Responses.CORRECT_GUESS;
+            }
+
+            if (IsLastTry())
+            {
+                return Responses.YOU_LOSE;
+            }
+            
+            return IsLower() 
+                ? Responses.GUESS_LOWER_THAN_CORRECT 
+                : Responses.GUESS_HIGHER_THAN_CORRECT;
+        }
+        finally
+        {
+            CurrentGuess++;
         }
 
-        if (IsHigher())
-        {
-            return Responses.GUESS_HIGHER_THAN_CORRECT;
-        }
-        
-        return Responses.CORRECT_GUESS;
+        bool IsCorrect() => guessedNumber == CorrectGuess;
 
-        bool IsLower()
-        {
-            return guessedNumber < CorrectGuess;
-        }
+        bool IsLastTry() => CurrentGuess == 3;
 
-        bool IsHigher()
-        {
-            return guessedNumber > CorrectGuess;
-        }
+        bool IsLower() => guessedNumber < CorrectGuess;
     }
 }

@@ -21,8 +21,6 @@ L
 Katas/Program.cs,e/d/ed205c47abaa1af47423cfc0f4d6c9ce8a89d269
 E
 Katas/Bags/Durance.cs,9/7/97e32e541a9c18626a652d1989cd9fd7c873e17b
-G
-Katas/Bags/Inventory.cs,9/f/9f6a8d11ef4691cf07ee4754db2d1766db3c7c39
 E
 Katas/Bags/BagType.cs,a/b/abffbfd4aeafe7c53e5e989040217937eb247b5f
 F
