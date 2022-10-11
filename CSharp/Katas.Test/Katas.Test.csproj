@@ -30,8 +30,4 @@
       <ProjectReference Include="..\Katas\Katas.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="RandomNumber" />
-    </ItemGroup>
-
 </Project>
