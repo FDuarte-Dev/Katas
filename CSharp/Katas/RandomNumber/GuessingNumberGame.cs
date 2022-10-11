@@ -2,25 +2,35 @@ namespace Katas.RandomNumber;
 
 public class GuessingNumberGame: IGuessingNumberGame
 {
-    public int CorrectGuess { get; }
+    private int CorrectGuess { get; }
     
     public GuessingNumberGame(RandomNumberGenerator generator)
     {
-        this.CorrectGuess = generator.GetInt();
+        CorrectGuess = generator.GetInt();
     }
 
     public string GuessNumber(int guessedNumber)
     {
-        if (guessedNumber < CorrectGuess)
+        if (IsLower())
         {
             return Responses.GUESS_LOWER_THAN_CORRECT;
         }
 
-        if (guessedNumber > CorrectGuess)
+        if (IsHigher())
         {
             return Responses.GUESS_HIGHER_THAN_CORRECT;
         }
         
         return Responses.CORRECT_GUESS;
+
+        bool IsLower()
+        {
+            return guessedNumber < CorrectGuess;
+        }
+
+        bool IsHigher()
+        {
+            return guessedNumber > CorrectGuess;
+        }
     }
 }

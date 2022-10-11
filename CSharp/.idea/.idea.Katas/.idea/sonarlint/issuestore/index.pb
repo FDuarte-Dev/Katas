@@ -40,8 +40,6 @@ D
 T
 $Katas.Test/Bags/UseCase/DuranceIT.cs,c/8/c8b019554b8d2b5a0efa2a8cf1579850b1cd7f82
 W
-'Katas.Test/Bags/PrinterServiceShould.cs,8/8/88dd23d03ae1ec80ca6384f8276acb460fc2aa8c
-W
 'Katas.Test/GameOfLife/PositionShould.cs,9/b/9b0353d9eaec1bdd3b1c5c484ff0cdd687187da9
 H
 Katas/GameOfLife/Cell.cs,d/2/d2b66623fb0525c0178d0cee0c457d03539c9094
