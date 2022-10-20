@@ -13,30 +13,14 @@ f
 PKatas.Test/obj/Debug/net6.0/Katas.Test.GeneratedMSBuildEditorConfig.editorconfig,d/8/d86c68aa2ad071ce33b1b74978523e3ff1ba7f2e
 h
 8Katas.Test/obj/Debug/net6.0/Katas.Test.GlobalUsings.g.cs,8/a/8acd5ec73d171b3e783a1b3ef8b3b62a91d11cf8
-9
-	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
 L
 Katas.Test/Katas.Test.csproj,3/f/3fe254eacd97318c11f2fe977af7c381776eabd7
 @
 Katas/Program.cs,e/d/ed205c47abaa1af47423cfc0f4d6c9ce8a89d269
 E
-Katas/Bags/Durance.cs,9/7/97e32e541a9c18626a652d1989cd9fd7c873e17b
-E
 Katas/Bags/BagType.cs,a/b/abffbfd4aeafe7c53e5e989040217937eb247b5f
-F
-Katas/Bags/MetalBag.cs,0/5/0553c3cc1b9e58a241f69fab533d275e9c6f8b2b
-F
-Katas/Bags/Backpack.cs,0/6/065db00fa20d0e4c2e68562a0dfadb85f7b2da06
-B
-Katas/Bags/IBag.cs,f/4/f45210cba7a5c48ce21eaf502e78271b8831fb6a
-L
-Katas/Bags/PrinterService.cs,5/8/58c8fc0234588dea29271483d5df15127ccb1854
-A
-Katas/Bags/Bag.cs,5/1/5124ea1428e7604adc48ffdc1cd94ffb982a83d9
 D
 Katas.Test/Usings.cs,0/3/03ba1d5cbb66dfe243fddf44744f90da3ef9c3b0
-T
-$Katas.Test/Bags/UseCase/DuranceIT.cs,c/8/c8b019554b8d2b5a0efa2a8cf1579850b1cd7f82
 W
 'Katas.Test/GameOfLife/PositionShould.cs,9/b/9b0353d9eaec1bdd3b1c5c484ff0cdd687187da9
 H
@@ -45,3 +29,29 @@ L
 Katas/GameOfLife/Position.cs,9/7/9772d84da656efc873190d5e14989ea265303f4b
 N
 Katas/GameOfLife/GameOfLife.cs,4/2/42b90c3edf128cfeb02f23aed57102ee05cb2275
+S
+#Katas.Test/GameOfLife/CellShould.cs,c/3/c3d954d58b592f50cc29cdc2c37fe414d41b9ae0
+Y
+)Katas.Test/GameOfLife/GameOfLifeShould.cs,1/e/1e7f651cdcff4afaca2531364fdd589d2650f0b1
+T
+$Katas.Test/GameOfLife/BoardShould.cs,8/3/837565f6b49ba8c1d151296f1cb3504c032fcf51
+I
+Katas/GameOfLife/Board.cs,b/9/b9c0724261bf09e03e5571740758ba6edbbce811
+Y
+)Katas/RandomNumber/IGuessingNumberGame.cs,2/2/22a0f940a0cb9e3574bedcac62d87639c4209d14
+t
+DKatas.Test/RandomNumber/TestDoubles/TestableRandomNumberGenerator.cs,d/a/daf3f5635d917569fe1fcf1fc1a3fa246bd77bfa
+[
++Katas/RandomNumber/RandomNumberGenerator.cs,5/9/59037bc83fd9bb493e678fb62c12eb675e8268aa
+f
+6Katas.Test/RandomNumber/RandomNumberGeneratorShould.cs,7/6/76c3cf6d0abd206b5f08240934226c0c959a47eb
+G
+Katas/Bags/Inventory.cs,9/f/9f6a8d11ef4691cf07ee4754db2d1766db3c7c39
+O
+Katas/RandomNumber/Responses.cs,0/9/09e5483b7db8be5276f7c20cc583386cb8f9c5c1
+X
+(Katas/RandomNumber/GuessingNumberGame.cs,c/6/c6dfca25a2aa40a250fe1b8e2db0028dcd58d032
+g
+7Katas.Test/RandomNumber/UseCase/GuessingNumberGameAT.cs,0/9/091950d9605e37f29642d2dff1191a9ad89c3a02
+c
+3Katas.Test/RandomNumber/GuessingNumberGameShould.cs,d/2/d2b1b63d4ae70d7763db316bd66c54a5c8ec620b

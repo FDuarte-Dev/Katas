@@ -7,17 +7,14 @@ public class PrinterServiceShould
     private static readonly string BackpackItemString = "backpack = ['Leather', 'Iron', 'Copper', 'Marigold', 'Wool', 'Gold', 'Silk', 'Copper']" + Environment.NewLine;
     private static readonly string[] Items = {"Leather", "Iron", "Copper", "Marigold", "Wool", "Gold", "Silk", "Copper"};
     private static readonly string BackpackAndMetalString = "backpack = []" + Environment.NewLine +
-                                                            "bag_with_metals_category" + Environment.NewLine;
+                                                            "bag_with_metals_category = []" + Environment.NewLine;
 
     private readonly StringWriter output;
-    private readonly PrinterService printerService;
 
     public PrinterServiceShould()
     {
         output = new StringWriter();
         Console.SetOut(output);
-        
-        printerService = new PrinterService();
     }
 
     [Fact]
@@ -33,7 +30,7 @@ public class PrinterServiceShould
         Assert.Equal(BackpackItemString, output.ToString());
     }
     
-    [Fact(Skip = "Clean testing for pair")]
+    [Fact]
     public void PrintBags()
     {
         var inventory = new Inventory()

@@ -15,6 +15,9 @@ public abstract class Bag: IBag
 
     public override string ToString()
     {
-        return $"{Type.Category()} = ['{string.Join("', '", items)}']";
+        return $"{Type.Category()} = " +
+               (items.Length == 0 
+                   ? "[]"
+                   : $"['{string.Join("', '", items)}']");
     }
 }
