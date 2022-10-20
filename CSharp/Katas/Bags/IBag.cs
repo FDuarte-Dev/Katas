@@ -1,9 +1,7 @@
-using Katas.Bags;
-
-namespace Katas.Test.Bags;
+namespace Katas.Bags;
 
 public interface IBag
 {
-    public string[] items { get; set; }
+    public List<string> Items { get; set; }
     public BagType Type { get; set; }
     }

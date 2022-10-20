@@ -4,20 +4,25 @@ namespace Katas.Bags;
 
 public abstract class Bag: IBag
 {
-    public string[] items { get; set; }
+    public List<string> Items { get; set; }
     public BagType Type { get; set; }
 
     protected Bag(BagType type)
     {
-        items = Array.Empty<string>();
+        Items = new List<string>();
         Type = type;
+    }
+    
+    public void AddItem(string item)
+    {
+        Items.Add(item);
     }
 
     public override string ToString()
     {
         return $"{Type.Category()} = " +
-               (items.Length == 0 
+               (Items.Count == 0 
                    ? "[]"
-                   : $"['{string.Join("', '", items)}']");
+                   : $"['{string.Join("', '", Items)}']");
     }
 }

@@ -1,15 +1,19 @@
+using Katas.Test.Bags;
+
 namespace Katas.Bags;
 
 public class Durance
 {
+    public Backpack Backpack { get; set; }
+    
     public Durance()
     {
-        throw new NotImplementedException();
+        Backpack = new Backpack();
     }
 
     public void Find(string item)
     {
-        throw new NotImplementedException();
+        Backpack.AddItem(item);
     }
 
     public void Organize()
@@ -22,12 +26,7 @@ public class Durance
         throw new NotImplementedException();
     }
 
-    public void AddBag(Backpack backpack)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void AddBag(MetalBag metalBag)
+    public void AddBag(IBag bag)
     {
         throw new NotImplementedException();
     }

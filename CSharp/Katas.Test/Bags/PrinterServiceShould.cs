@@ -5,7 +5,7 @@ namespace Katas.Test.Bags;
 public class PrinterServiceShould
 {
     private static readonly string BackpackItemString = "backpack = ['Leather', 'Iron', 'Copper', 'Marigold', 'Wool', 'Gold', 'Silk', 'Copper']" + Environment.NewLine;
-    private static readonly string[] Items = {"Leather", "Iron", "Copper", "Marigold", "Wool", "Gold", "Silk", "Copper"};
+    private static readonly List<string> Items = new() {"Leather", "Iron", "Copper", "Marigold", "Wool", "Gold", "Silk", "Copper"};
     private static readonly string BackpackAndMetalString = "backpack = []" + Environment.NewLine +
                                                             "bag_with_metals_category = []" + Environment.NewLine;
 
@@ -22,7 +22,7 @@ public class PrinterServiceShould
     {
         var bag = new Backpack()
         {
-            items = Items
+            Items = Items
         };
 
         PrinterService.PrintBag(bag);
