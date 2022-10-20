@@ -20,7 +20,8 @@ public class DuranceIT
     public void Story()
     { 
         // Arrange
-        var durance = new Durance();
+        var backpack = new Backpack();
+        var durance = new Durance(backpack);
 
         durance.Find("Leather");
         durance.Find("Iron");

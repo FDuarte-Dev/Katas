@@ -4,11 +4,11 @@ namespace Katas.Bags;
 
 public class Durance
 {
-    public Backpack Backpack { get; set; }
+    private IBag Backpack { get; }
     
-    public Durance()
+    public Durance(IBag backpack)
     {
-        Backpack = new Backpack();
+        Backpack = backpack;
     }
 
     public void Find(string item)

@@ -55,3 +55,7 @@ g
 7Katas.Test/RandomNumber/UseCase/GuessingNumberGameAT.cs,0/9/091950d9605e37f29642d2dff1191a9ad89c3a02
 c
 3Katas.Test/RandomNumber/GuessingNumberGameShould.cs,d/2/d2b1b63d4ae70d7763db316bd66c54a5c8ec620b
+F
+Katas/Bags/MetalBag.cs,0/5/0553c3cc1b9e58a241f69fab533d275e9c6f8b2b
+9
+	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
