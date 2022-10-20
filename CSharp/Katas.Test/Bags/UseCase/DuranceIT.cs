@@ -4,26 +4,44 @@ namespace Katas.Test.Bags.UseCase;
 
 public class DuranceIT
 {
-    [Fact]
-    public void OrganizeFiles()
+    private static readonly string OrganizedBags =
+        "backpack = ['Cherry Blossom', 'Iron', 'Leather', 'Marigold', 'Silk',   'Wool']" + Environment.NewLine +
+        "bag_with_metals_category = ['Copper', 'Copper', 'Copper', 'Gold']";
+    
+    private readonly StringWriter output;
+
+    public DuranceIT()
     {
-        var backpack = new Backpack()
-        {
-            items = new[]{"Leather", "Iron", "Copper", "Marigold", "Wool", "Gold", "Silk", "Copper"}
-        };
-        var metalBag = new MetalBag();
-        
+        output = new StringWriter();
+        Console.SetOut(output);
+    }
+    
+    [Fact]
+    public void Story()
+    { 
+        // Arrange
         var durance = new Durance();
 
-        durance.AddBag(backpack);
+        durance.Find("Leather");
+        durance.Find("Iron");
+        durance.Find("Copper");
+        durance.Find("Marigold");
+        durance.Find("Wool");
+        durance.Find("Gold");
+        durance.Find("Silk");
+        durance.Find("Copper");
+
+        var metalBag = new MetalBag();
         durance.AddBag(metalBag);
 
         durance.Find("Copper");
         durance.Find("Cherry Blossom");
 
+        // Act
         durance.Organize();
-
-        // TODO: Verification using a logger
+        
+        // Assert
         durance.ShowBags();
+        Assert.Equal(OrganizedBags, output.ToString());
     }
 }
