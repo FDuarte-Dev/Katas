@@ -101,3 +101,7 @@ fabric.properties
 /CSharp/Katas/obj/
 /CSharp/Katas.Test/bin/
 /CSharp/Katas.Test/obj/
+/CSharp/Katas.Test/bin/*
+/CSharp/Katas.Test/obj/*
+../../Katas.Test/bin/
+../../Katas.Test/obj
