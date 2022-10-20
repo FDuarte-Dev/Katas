@@ -1,4 +1,3 @@
-/CSharp/.idea/.idea.Katas/.idea
 # Created by https://www.toptal.com/developers/gitignore/api/rider
 # Edit at https://www.toptal.com/developers/gitignore?templates=rider
 
@@ -82,3 +81,9 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # End of https://www.toptal.com/developers/gitignore/api/rider
+/CSharp/.idea/.idea.Katas/.idea/sonarlint
+.idea/.idea.Katas
+/CSharp/Katas/bin/
+/CSharp/Katas/obj/
+/CSharp/Katas.Test/bin/
+/CSharp/Katas.Test/obj/
