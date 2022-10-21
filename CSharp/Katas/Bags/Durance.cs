@@ -5,12 +5,14 @@ namespace Katas.Bags;
 public class Durance
 {
     private IBag Backpack { get; }
-    public List<IBag> Bags { get; set; }
-    public int BagLimit { get; }
+    private IOrganizer Organizer { get; }
+    public List<IBag> Bags { get; }
+    private int BagLimit { get; }
 
-    public Durance(IBag backpack)
+    public Durance(IBag backpack, IOrganizer organizer)
     {
         Backpack = backpack;
+        Organizer = organizer;
         Bags = new List<IBag>();
         BagLimit = 4;
     }
@@ -22,7 +24,7 @@ public class Durance
 
     public void Organize()
     {
-        throw new NotImplementedException();
+        Organizer.OrganizeItems(Backpack, Bags);
     }
 
     public void ShowBags()

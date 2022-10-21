@@ -21,7 +21,8 @@ public class DuranceIT
     { 
         // Arrange
         var backpack = new Backpack();
-        var durance = new Durance(backpack);
+        var organizer = new Organizer();
+        var durance = new Durance(backpack, organizer);
 
         durance.Find("Leather");
         durance.Find("Iron");

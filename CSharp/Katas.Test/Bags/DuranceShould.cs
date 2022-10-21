@@ -6,26 +6,28 @@ namespace Katas.Test.Bags;
 
 public class DuranceShould
 {
-    private static readonly Mock<IBag> Backpack = new();
+    private static readonly Mock<IOrganizer> Organizer = new();
     
     [Fact]
     public void BeAbleToFindItems()
     {
         // Arrange
-        var durance = new Durance(Backpack.Object);
+        var backpack = new Mock<IBag>();
+        var durance = new Durance(backpack.Object, Organizer.Object);
         
         // Act
         durance.Find("Leather");
         
         // Assert
-        Backpack.Verify(mock => mock.AddItem(It.IsAny<string>()), Times.Once);
+        backpack.Verify(mock => mock.AddItem(It.IsAny<string>()), Times.Once);
     }
 
     [Fact]
     public void BeAbleToAddBags()
     {
         // Arrange
-        var durance = new Durance(Backpack.Object);
+        var backpack = new Mock<IBag>();
+        var durance = new Durance(backpack.Object, Organizer.Object);
         var bag = new MetalBag();
 
         // Act
@@ -39,7 +41,8 @@ public class DuranceShould
     public void OnlyAddBagsUpToLimit()
     {
         // Arrange
-        var durance = new Durance(Backpack.Object);
+        var backpack = new Mock<IBag>();
+        var durance = new Durance(backpack.Object, Organizer.Object);
         
         var firstBag = new MetalBag();
         var secondBag = new MetalBag();
@@ -55,5 +58,24 @@ public class DuranceShould
         // Act
         // Assert
         Assert.Throws<BagLimitReachedException>(() => durance.AddBag(fifthBag));
+    }
+
+    [Fact]
+    public void OrganizeBags()
+    {
+        // Arrange
+        var backpack = new Mock<IBag>();
+        var durance = new Durance(backpack.Object, Organizer.Object);
+        durance.Find("Leather");
+        Organizer
+            .Setup(x => x.OrganizeItems(It.IsAny<IBag>(), It.IsAny<List<IBag>>()))
+            .Callback(() => {})
+            .Verifiable();
+        
+        // Act
+        durance.Organize();
+        
+        // Assert
+        Organizer.Verify(mock => mock.OrganizeItems(It.IsAny<IBag>(), It.IsAny<List<IBag>>()), Times.Once);
     }
 }
