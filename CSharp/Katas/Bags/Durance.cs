@@ -5,10 +5,14 @@ namespace Katas.Bags;
 public class Durance
 {
     private IBag Backpack { get; }
-    
+    public List<IBag> Bags { get; set; }
+    public int BagLimit { get; }
+
     public Durance(IBag backpack)
     {
         Backpack = backpack;
+        Bags = new List<IBag>();
+        BagLimit = 4;
     }
 
     public void Find(string item)
@@ -28,6 +32,8 @@ public class Durance
 
     public void AddBag(IBag bag)
     {
-        throw new NotImplementedException();
+        if (Bags.Count >= BagLimit)
+            throw new BagLimitReachedException();
+        Bags.Add(bag);
     }
 }
