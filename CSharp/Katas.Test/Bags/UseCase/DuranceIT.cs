@@ -5,7 +5,7 @@ namespace Katas.Test.Bags.UseCase;
 public class DuranceIT
 {
     private static readonly string OrganizedBags =
-        "backpack = ['Cherry Blossom', 'Iron', 'Leather', 'Marigold', 'Silk',   'Wool']" + Environment.NewLine +
+        "backpack = ['Cherry Blossom', 'Iron', 'Leather', 'Marigold', 'Silk', 'Wool']" + Environment.NewLine +
         "bag_with_metals_category = ['Copper', 'Copper', 'Copper', 'Gold']";
     
     private readonly StringWriter output;

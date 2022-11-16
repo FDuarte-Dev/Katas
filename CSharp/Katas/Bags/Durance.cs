@@ -29,7 +29,8 @@ public class Durance
 
     public void ShowBags()
     {
-        throw new NotImplementedException();
+        PrinterService.PrintBag(Backpack);
+        PrinterService.PrintInventory(Bags);
     }
 
     public void AddBag(IBag bag)

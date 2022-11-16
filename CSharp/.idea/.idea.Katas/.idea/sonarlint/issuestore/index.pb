@@ -15,8 +15,6 @@ h
 8Katas.Test/obj/Debug/net6.0/Katas.Test.GlobalUsings.g.cs,8/a/8acd5ec73d171b3e783a1b3ef8b3b62a91d11cf8
 L
 Katas.Test/Katas.Test.csproj,3/f/3fe254eacd97318c11f2fe977af7c381776eabd7
-E
-Katas/Bags/BagType.cs,a/b/abffbfd4aeafe7c53e5e989040217937eb247b5f
 D
 Katas.Test/Usings.cs,0/3/03ba1d5cbb66dfe243fddf44744f90da3ef9c3b0
 W
@@ -43,8 +41,6 @@ DKatas.Test/RandomNumber/TestDoubles/TestableRandomNumberGenerator.cs,d/a/daf3f
 +Katas/RandomNumber/RandomNumberGenerator.cs,5/9/59037bc83fd9bb493e678fb62c12eb675e8268aa
 f
 6Katas.Test/RandomNumber/RandomNumberGeneratorShould.cs,7/6/76c3cf6d0abd206b5f08240934226c0c959a47eb
-G
-Katas/Bags/Inventory.cs,9/f/9f6a8d11ef4691cf07ee4754db2d1766db3c7c39
 O
 Katas/RandomNumber/Responses.cs,0/9/09e5483b7db8be5276f7c20cc583386cb8f9c5c1
 X

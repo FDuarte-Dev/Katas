@@ -33,16 +33,13 @@ public class PrinterServiceShould
     [Fact]
     public void PrintBags()
     {
-        var inventory = new Inventory()
+        var bags = new List<IBag>
         {
-            Bags = new List<IBag>()
-            {
-                new Backpack(),
-                new MetalBag()
-            }
+            new Backpack(),
+            new MetalBag()
         };
 
-        PrinterService.PrintInventory(inventory);
+        PrinterService.PrintInventory(bags);
         
         Assert.Equal(BackpackAndMetalString, output.ToString());
     }
