@@ -9,29 +9,45 @@ public class OrganizerShould
     public void SendItemsToCorrectBag()
     {
         // Arrange
-        var bag = new Backpack()
+        var backpack = new Backpack()
         {
             Items = new List<string>()
             {
+                "Leather",
+                "Marigold",
                 "Iron",
-                "Leather"
+                "Axe"
             }
         };
         var bags = new List<IBag>()
         {
-            new MetalBag()
+            new ClothesBag(),
+            new HerbBag(),
+            new MetalBag(),
+            new WeaponBag()
         };
         var organizer = new Organizer();
         
         // Act
-        organizer.OrganizeItems(bag, bags);
+        organizer.OrganizeItems(backpack, bags);
         
         // Assert
-        bag.Items.Should().HaveCount(1);
-        bag.Items[0].Should().Be("Leather");
+        backpack.Items.Should().HaveCount(0);
 
-        var metalBag = bags[0];
+        var clothesBag = bags[0];
+        clothesBag.Items.Should().HaveCount(1);
+        clothesBag.Items[0].Should().Be("Leather");
+        
+        var herbBag = bags[1];
+        herbBag.Items.Should().HaveCount(1);
+        herbBag.Items[0].Should().Be("Marigold");
+        
+        var metalBag = bags[2];
         metalBag.Items.Should().HaveCount(1);
         metalBag.Items[0].Should().Be("Iron");
+        
+        var weaponBag = bags[3];
+        weaponBag.Items.Should().HaveCount(1);
+        weaponBag.Items[0].Should().Be("Axe");
     }
 }

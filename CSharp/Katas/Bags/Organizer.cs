@@ -16,27 +16,37 @@ public class Organizer : IOrganizer
         
         foreach (var item in items)
         {
-            if (IsMetal(item))
-            {
-                var bag = bags.First(x => x.Type == BagType.METALS);
+            IBag? bag = null;
+            bag = SelectBag(backpack, bags, item, bag);
 
-                bag.AddItem(item);
-                continue;
-            }
-            
-            backpack.AddItem(item);
+            bag!.AddItem(item);
         }
-        
-        foreach (var item in backpack.Items)
+    }
+
+    private static IBag? SelectBag(IBag backpack, IReadOnlyCollection<IBag> bags, string item, IBag? bag)
+    {
+        if (IsClothes(item))
         {
-            if (IsMetal(item))
-            {
-                var metalBag = bags.First(x => x.Type == BagType.METALS);
-                
-                metalBag.AddItem(item);
-                backpack.RemoveItem(item);
-            }
+            bag = bags.First(x => x.Type == BagType.CLOTHES);
         }
+
+        if (IsHerb(item))
+        {
+            bag = bags.First(x => x.Type == BagType.HERBS);
+        }
+
+        if (IsMetal(item))
+        {
+            bag = bags.First(x => x.Type == BagType.METALS);
+        }
+
+        if (IsWeapon(item))
+        {
+            bag = bags.First(x => x.Type == BagType.WEAPONS);
+        }
+
+        bag ??= backpack;
+        return bag;
     }
 
     private static bool IsClothes(string item) => item is "Leather" or "Linen" or "Silk" or "Wool";

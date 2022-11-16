@@ -1,5 +1,8 @@
 namespace Katas.Bags;
 
-public class WeaponBag
+public class WeaponBag : Bag
 {
+    public WeaponBag() : base(BagType.WEAPONS)
+    {
+    }
 }
