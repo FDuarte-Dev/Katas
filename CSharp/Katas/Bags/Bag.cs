@@ -18,6 +18,16 @@ public abstract class Bag: IBag
         Items.Add(item);
     }
 
+    public void RemoveItem(string item)
+    {
+        Items.Remove(item);
+    }
+
+    public void Empty()
+    {
+        Items = new List<string>();
+    }
+
     public override string ToString()
     {
         return $"{Type.Category()} = " +

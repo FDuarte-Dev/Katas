@@ -6,4 +6,6 @@ public interface IBag
     public BagType Type { get; set; }
 
     public void AddItem(string item);
+    public void RemoveItem(string item);
+    public void Empty();
 }
