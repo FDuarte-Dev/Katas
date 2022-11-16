@@ -19,30 +19,38 @@ public class Organizer : IOrganizer
             IBag? bag = null;
             bag = SelectBag(backpack, bags, item, bag);
 
-            bag!.AddItem(item);
+            bag.AddItem(item);
         }
     }
 
-    private static IBag? SelectBag(IBag backpack, IReadOnlyCollection<IBag> bags, string item, IBag? bag)
+    private static IBag SelectBag(IBag backpack, IReadOnlyCollection<IBag> bags, string item, IBag? bag)
     {
         if (IsClothes(item))
         {
-            bag = bags.First(x => x.Type == BagType.CLOTHES);
+            bag = bags.FirstOrDefault(x =>
+                x.Type == BagType.CLOTHES &&
+                x.Items.Count < x.Limit);
         }
 
         if (IsHerb(item))
         {
-            bag = bags.First(x => x.Type == BagType.HERBS);
+            bag = bags.FirstOrDefault(x =>
+                x.Type == BagType.HERBS &&
+                x.Items.Count < x.Limit);
         }
 
         if (IsMetal(item))
         {
-            bag = bags.First(x => x.Type == BagType.METALS);
+            bag = bags.FirstOrDefault(x =>
+                x.Type == BagType.METALS &&
+                x.Items.Count < x.Limit);
         }
 
         if (IsWeapon(item))
         {
-            bag = bags.First(x => x.Type == BagType.WEAPONS);
+            bag = bags.FirstOrDefault(x =>
+                x.Type == BagType.WEAPONS &&
+                x.Items.Count < x.Limit);
         }
 
         bag ??= backpack;

@@ -55,5 +55,3 @@ c
 3Katas.Test/RandomNumber/GuessingNumberGameShould.cs,d/2/d2b1b63d4ae70d7763db316bd66c54a5c8ec620b
 9
 	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
-F
-Katas/Bags/Backpack.cs,0/6/065db00fa20d0e4c2e68562a0dfadb85f7b2da06

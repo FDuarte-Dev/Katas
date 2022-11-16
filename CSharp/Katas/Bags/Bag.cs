@@ -6,16 +6,21 @@ public abstract class Bag: IBag
 {
     public List<string> Items { get; set; }
     public BagType Type { get; set; }
+    public int Limit { get; init; }
 
     protected Bag(BagType type)
     {
         Items = new List<string>();
         Type = type;
+        Limit = 4;
     }
     
     public void AddItem(string item)
     {
-        Items.Add(item);
+        if (Items.Count < Limit)
+        {
+            Items.Add(item);
+        }
     }
 
     public void RemoveItem(string item)

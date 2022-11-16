@@ -5,5 +5,7 @@ namespace Katas.Bags;
 public class Backpack : Bag
 {
     public Backpack() : base(BagType.BACKPACK)
-    { }
+    {
+        Limit = 8;
+    }
 }
