@@ -3,6 +3,7 @@ using Katas.GameOfLife;
 
 namespace Katas.Test.GameOfLife;
 
+[Collection("GameOfLife")]
 public class CellShould
 {
     [Fact]

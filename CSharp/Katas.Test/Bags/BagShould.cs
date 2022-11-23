@@ -3,6 +3,7 @@ using Katas.Bags;
 
 namespace Katas.Test.Bags;
 
+[Collection("Bags")]
 public class BagShould
 {
     [Fact]

@@ -17,38 +17,22 @@ L
 Katas.Test/Katas.Test.csproj,3/f/3fe254eacd97318c11f2fe977af7c381776eabd7
 D
 Katas.Test/Usings.cs,0/3/03ba1d5cbb66dfe243fddf44744f90da3ef9c3b0
-W
-'Katas.Test/GameOfLife/PositionShould.cs,9/b/9b0353d9eaec1bdd3b1c5c484ff0cdd687187da9
 H
 Katas/GameOfLife/Cell.cs,d/2/d2b66623fb0525c0178d0cee0c457d03539c9094
 L
 Katas/GameOfLife/Position.cs,9/7/9772d84da656efc873190d5e14989ea265303f4b
 N
 Katas/GameOfLife/GameOfLife.cs,4/2/42b90c3edf128cfeb02f23aed57102ee05cb2275
-S
-#Katas.Test/GameOfLife/CellShould.cs,c/3/c3d954d58b592f50cc29cdc2c37fe414d41b9ae0
-Y
-)Katas.Test/GameOfLife/GameOfLifeShould.cs,1/e/1e7f651cdcff4afaca2531364fdd589d2650f0b1
-T
-$Katas.Test/GameOfLife/BoardShould.cs,8/3/837565f6b49ba8c1d151296f1cb3504c032fcf51
 I
 Katas/GameOfLife/Board.cs,b/9/b9c0724261bf09e03e5571740758ba6edbbce811
 Y
 )Katas/RandomNumber/IGuessingNumberGame.cs,2/2/22a0f940a0cb9e3574bedcac62d87639c4209d14
-t
-DKatas.Test/RandomNumber/TestDoubles/TestableRandomNumberGenerator.cs,d/a/daf3f5635d917569fe1fcf1fc1a3fa246bd77bfa
 [
 +Katas/RandomNumber/RandomNumberGenerator.cs,5/9/59037bc83fd9bb493e678fb62c12eb675e8268aa
-f
-6Katas.Test/RandomNumber/RandomNumberGeneratorShould.cs,7/6/76c3cf6d0abd206b5f08240934226c0c959a47eb
 O
 Katas/RandomNumber/Responses.cs,0/9/09e5483b7db8be5276f7c20cc583386cb8f9c5c1
 X
 (Katas/RandomNumber/GuessingNumberGame.cs,c/6/c6dfca25a2aa40a250fe1b8e2db0028dcd58d032
-g
-7Katas.Test/RandomNumber/UseCase/GuessingNumberGameAT.cs,0/9/091950d9605e37f29642d2dff1191a9ad89c3a02
-c
-3Katas.Test/RandomNumber/GuessingNumberGameShould.cs,d/2/d2b1b63d4ae70d7763db316bd66c54a5c8ec620b
 9
 	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
 @

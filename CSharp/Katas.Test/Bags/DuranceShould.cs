@@ -4,6 +4,7 @@ using Moq;
 
 namespace Katas.Test.Bags;
 
+[Collection("Bags")]
 public class DuranceShould
 {
     private static readonly Mock<IOrganizer> Organizer = new();

@@ -4,6 +4,7 @@ using Katas.Test.RandomNumber.TestDoubles;
 
 namespace Katas.Test.RandomNumber.UseCase;
 
+[Collection("RandomNumber")]
 public class GuessingNumberGameAT
 {
     [Fact]

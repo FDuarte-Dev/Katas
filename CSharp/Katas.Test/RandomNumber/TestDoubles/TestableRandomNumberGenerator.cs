@@ -2,6 +2,7 @@ using Katas.RandomNumber;
 
 namespace Katas.Test.RandomNumber.TestDoubles;
 
+[Collection("RandomNumber")]
 public class TestableRandomNumberGenerator: RandomNumberGenerator
 {
     private int CorrectGuess { get; }

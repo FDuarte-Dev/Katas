@@ -2,6 +2,7 @@ using Katas.GameOfLife;
 
 namespace Katas.Test.GameOfLife;
 
+[Collection("GameOfLife")]
 public class GameOfLifeShould
 {
     [Fact]

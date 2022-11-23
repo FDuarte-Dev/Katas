@@ -2,6 +2,7 @@ using FluentAssertions;
 
 namespace Katas.Test.GameOfLife;
 
+[Collection("GameOfLife")]
 public class PositionShould
 {
     [Fact]

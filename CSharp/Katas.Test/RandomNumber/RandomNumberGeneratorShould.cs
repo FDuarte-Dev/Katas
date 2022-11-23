@@ -3,6 +3,7 @@ using Katas.RandomNumber;
 
 namespace Katas.Test.RandomNumber;
 
+[Collection("RandomNumber")]
 public class RandomNumberGeneratorShould
 {
     [Fact]

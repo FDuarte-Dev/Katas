@@ -2,6 +2,7 @@ using Katas.Bags;
 
 namespace Katas.Test.Bags.UseCase;
 
+[Collection("Bags")]
 public class DuranceIT
 {
     private static readonly string OrganizedBags =

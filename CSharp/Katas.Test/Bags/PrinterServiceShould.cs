@@ -2,6 +2,7 @@ using Katas.Bags;
 
 namespace Katas.Test.Bags;
 
+[Collection("Bags")]
 public class PrinterServiceShould
 {
     private static readonly string BackpackItemString = "backpack = ['Leather', 'Iron', 'Copper', 'Marigold', 'Wool', 'Gold', 'Silk', 'Copper']" + Environment.NewLine;

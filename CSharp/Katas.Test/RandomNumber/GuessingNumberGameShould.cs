@@ -4,6 +4,7 @@ using Katas.Test.RandomNumber.TestDoubles;
 
 namespace Katas.Test.RandomNumber;
 
+[Collection("RandomNumber")]
 public class GuessingNumberGameShould
 {
     [Fact]
