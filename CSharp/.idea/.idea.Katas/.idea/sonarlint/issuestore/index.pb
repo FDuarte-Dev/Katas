@@ -65,5 +65,3 @@ F
 Katas/Bags/Backpack.cs,0/6/065db00fa20d0e4c2e68562a0dfadb85f7b2da06
 E
 Katas/Bags/BagType.cs,a/b/abffbfd4aeafe7c53e5e989040217937eb247b5f
-A
-Katas/Bags/Bag.cs,5/1/5124ea1428e7604adc48ffdc1cd94ffb982a83d9

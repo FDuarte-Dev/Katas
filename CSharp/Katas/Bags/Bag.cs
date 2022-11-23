@@ -17,10 +17,11 @@ public abstract class Bag: IBag
     
     public void AddItem(string item)
     {
-        if (Items.Count < Limit)
+        if (Items.Count >= Limit)
         {
-            Items.Add(item);
-        }
+            throw new ItemLimitExceededException();
+        };
+        Items.Add(item);
     }
 
     public void RemoveItem(string item)

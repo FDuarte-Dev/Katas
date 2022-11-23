@@ -61,6 +61,14 @@ public class DuranceShould
     }
 
     [Fact]
+    public void AddItemToNextAvailableBag()
+    {
+        // Arrange
+        // Act
+        // Assert
+    }
+
+    [Fact]
     public void OrganizeBags()
     {
         // Arrange
