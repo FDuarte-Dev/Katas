@@ -1,4 +1,6 @@
-using Katas.Test.Bags;
+using Katas.Bags.Bags;
+using Katas.Bags.Bags.Exception;
+using Katas.Bags.Items.Exception;
 
 namespace Katas.Bags;
 

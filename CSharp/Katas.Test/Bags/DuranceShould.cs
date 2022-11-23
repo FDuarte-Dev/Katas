@@ -1,5 +1,10 @@
 using FluentAssertions;
 using Katas.Bags;
+using Katas.Bags.Bags;
+using Katas.Bags.Bags.Exception;
+using Katas.Bags.Bags.Impl;
+using Katas.Bags.Items;
+using Katas.Bags.Items.Exception;
 using Moq;
 
 namespace Katas.Test.Bags;

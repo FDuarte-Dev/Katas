@@ -1,4 +1,6 @@
 using Katas.Bags;
+using Katas.Bags.Bags;
+using Katas.Bags.Bags.Impl;
 
 namespace Katas.Test.Bags;
 

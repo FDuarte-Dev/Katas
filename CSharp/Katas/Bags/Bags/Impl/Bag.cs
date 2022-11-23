@@ -1,6 +1,6 @@
-using Katas.Test.Bags;
+using Katas.Bags.Items.Exception;
 
-namespace Katas.Bags;
+namespace Katas.Bags.Bags.Impl;
 
 public abstract class Bag: IBag
 {
@@ -20,7 +20,7 @@ public abstract class Bag: IBag
         if (Items.Count >= Limit)
         {
             throw new ItemLimitExceededException();
-        };
+        }
         Items.Add(item);
     }
 

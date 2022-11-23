@@ -1,3 +1,5 @@
+using Katas.Bags.Bags;
+
 namespace Katas.Bags;
 
 public class Organizer : IOrganizer
@@ -29,28 +31,28 @@ public class Organizer : IOrganizer
         if (IsClothes(item))
         {
             bag = bags.FirstOrDefault(x =>
-                x.Type == BagType.CLOTHES &&
+                x.Type == BagType.Clothes &&
                 x.Items.Count < x.Limit);
         }
 
         if (IsHerb(item))
         {
             bag = bags.FirstOrDefault(x =>
-                x.Type == BagType.HERBS &&
+                x.Type == BagType.Herbs &&
                 x.Items.Count < x.Limit);
         }
 
         if (IsMetal(item))
         {
             bag = bags.FirstOrDefault(x =>
-                x.Type == BagType.METALS &&
+                x.Type == BagType.Metals &&
                 x.Items.Count < x.Limit);
         }
 
         if (IsWeapon(item))
         {
             bag = bags.FirstOrDefault(x =>
-                x.Type == BagType.WEAPONS &&
+                x.Type == BagType.Weapons &&
                 x.Items.Count < x.Limit);
         }
 
@@ -58,8 +60,8 @@ public class Organizer : IOrganizer
         return bag;
     }
 
-    private static bool IsClothes(string item) => item is Items.Clothes.Leather or Items.Clothes.Linen or Items.Clothes.Silk or Items.Clothes.Wool;
-    private static bool IsHerb(string item) => item is Items.Herbs.CherryBlossom or Items.Herbs.Marigold or Items.Herbs.Rose or Items.Herbs.Seaweed;
-    private static bool IsMetal(string item) => item is Items.Metals.Copper or Items.Metals.Gold or Items.Metals.Iron or Items.Metals.Silver;
-    private static bool IsWeapon(string item) => item is Items.Weapons.Axe or Items.Weapons.Dagger or Items.Weapons.Mace or Items.Weapons.Sword;
+    private static bool IsClothes(string item) => item is Items.Items.Clothes.Leather or Items.Items.Clothes.Linen or Items.Items.Clothes.Silk or Items.Items.Clothes.Wool;
+    private static bool IsHerb(string item) => item is Items.Items.Herbs.CherryBlossom or Items.Items.Herbs.Marigold or Items.Items.Herbs.Rose or Items.Items.Herbs.Seaweed;
+    private static bool IsMetal(string item) => item is Items.Items.Metals.Copper or Items.Items.Metals.Gold or Items.Items.Metals.Iron or Items.Items.Metals.Silver;
+    private static bool IsWeapon(string item) => item is Items.Items.Weapons.Axe or Items.Items.Weapons.Dagger or Items.Items.Weapons.Mace or Items.Items.Weapons.Sword;
 }

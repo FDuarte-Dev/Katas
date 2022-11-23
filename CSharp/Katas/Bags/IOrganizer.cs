@@ -1,3 +1,5 @@
+using Katas.Bags.Bags;
+
 namespace Katas.Bags;
 
 public interface IOrganizer

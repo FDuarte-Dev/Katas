@@ -1,4 +1,4 @@
-namespace Katas.Bags;
+namespace Katas.Bags.Items;
 
 public static class Items
 {

@@ -1,8 +1,8 @@
-using Katas.Bags;
+using Katas.Bags.Bags;
 
-namespace Katas.Test.Bags;
+namespace Katas.Bags;
 
-public class PrinterService
+public static class PrinterService
 {
     public static void PrintBag(IBag bag) => Console.Out.WriteLine(bag);
 
