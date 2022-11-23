@@ -5,7 +5,7 @@ namespace Katas.Test.Bags;
 
 public class OrganizerShould
 {
-    private static readonly Organizer organizer = new ();
+    private static readonly Organizer Organizer = new ();
     
     [Fact]
     public void SendItemsToCorrectBag()
@@ -15,10 +15,10 @@ public class OrganizerShould
         {
             Items = new List<string>()
             {
-                "Leather",
-                "Marigold",
-                "Iron",
-                "Axe"
+                Items.Clothes.Leather,
+                Items.Herbs.Marigold,
+                Items.Metals.Iron,
+                Items.Weapons.Axe
             }
         };
         var bags = new List<IBag>()
@@ -30,26 +30,26 @@ public class OrganizerShould
         };
 
         // Act
-        organizer.OrganizeItems(backpack, bags);
+        Organizer.OrganizeItems(backpack, bags);
         
         // Assert
         backpack.Items.Should().HaveCount(0);
 
         var clothesBag = bags[0];
         clothesBag.Items.Should().HaveCount(1);
-        clothesBag.Items[0].Should().Be("Leather");
+        clothesBag.Items[0].Should().Be(Items.Clothes.Leather);
         
         var herbBag = bags[1];
         herbBag.Items.Should().HaveCount(1);
-        herbBag.Items[0].Should().Be("Marigold");
+        herbBag.Items[0].Should().Be(Items.Herbs.Marigold);
         
         var metalBag = bags[2];
         metalBag.Items.Should().HaveCount(1);
-        metalBag.Items[0].Should().Be("Iron");
+        metalBag.Items[0].Should().Be(Items.Metals.Iron);
         
         var weaponBag = bags[3];
         weaponBag.Items.Should().HaveCount(1);
-        weaponBag.Items[0].Should().Be("Axe");
+        weaponBag.Items[0].Should().Be(Items.Weapons.Axe);
     }
     
     [Fact]
@@ -60,11 +60,11 @@ public class OrganizerShould
         {
             Items = new List<string>()
             {
-                "Leather",
-                "Leather",
-                "Leather",
-                "Leather",
-                "Leather"
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather
             }
         };
         var bags = new List<IBag>()
@@ -73,16 +73,16 @@ public class OrganizerShould
         };
         
         // Act
-        organizer.OrganizeItems(backpack, bags);
+        Organizer.OrganizeItems(backpack, bags);
         
         // Assert
         backpack.Items.Should().HaveCount(1);
-        backpack.Items[0].Should().Be("Leather");
+        backpack.Items[0].Should().Be(Items.Clothes.Leather);
         
 
         var clothesBag = bags[0];
         clothesBag.Items.Should().HaveCount(clothesBag.Limit);
-        clothesBag.Items.Should().OnlyContain(x => x == "Leather");
+        clothesBag.Items.Should().OnlyContain(x => x == Items.Clothes.Leather);
     }
     
     [Fact]
@@ -93,11 +93,11 @@ public class OrganizerShould
         {
             Items = new List<string>()
             {
-                "Leather",
-                "Leather",
-                "Leather",
-                "Leather",
-                "Leather"
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather,
+                Items.Clothes.Leather
             }
         };
         var bags = new List<IBag>()
@@ -107,18 +107,18 @@ public class OrganizerShould
         };
         
         // Act
-        organizer.OrganizeItems(backpack, bags);
+        Organizer.OrganizeItems(backpack, bags);
         
         // Assert
         backpack.Items.Should().HaveCount(0);
 
         var firstClothesBag = bags[0];
         firstClothesBag.Items.Should().HaveCount(firstClothesBag.Limit);
-        firstClothesBag.Items.Should().OnlyContain(x => x == "Leather");
+        firstClothesBag.Items.Should().OnlyContain(x => x == Items.Clothes.Leather);
         
         var secondClothesBag = bags[1];
         secondClothesBag.Items.Should().HaveCount(1);
-        secondClothesBag.Items.Should().OnlyContain(x => x == "Leather");
+        secondClothesBag.Items.Should().OnlyContain(x => x == Items.Clothes.Leather);
     }
 
     [Fact]
@@ -129,21 +129,21 @@ public class OrganizerShould
         {
             Items = new List<string>()
             {
-                "Wool",
-                "Leather",
-                "Cherry Blossom"
+                Items.Clothes.Wool,
+                Items.Clothes.Leather,
+                Items.Herbs.CherryBlossom
             }
         };
         var bags = new List<IBag>();
         
         // Act
-        organizer.OrganizeItems(backpack, bags);
+        Organizer.OrganizeItems(backpack, bags);
         
         // Assert
         backpack.Items.Should().HaveCount(3);
         
-        backpack.Items[0].Should().Be("Cherry Blossom");
-        backpack.Items[1].Should().Be("Leather");
-        backpack.Items[2].Should().Be("Wool");
+        backpack.Items[0].Should().Be(Items.Herbs.CherryBlossom);
+        backpack.Items[1].Should().Be(Items.Clothes.Leather);
+        backpack.Items[2].Should().Be(Items.Clothes.Wool);
     }
 }

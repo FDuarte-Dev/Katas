@@ -12,10 +12,10 @@ public class BagShould
         var bag = new Backpack();
         
         // Act
-        bag.AddItem("Leather");
+        bag.AddItem(Items.Clothes.Leather);
         
         // Assert
         bag.Items.Count.Should().Be(1);
-        bag.Items[0].Should().Be("Leather");
+        bag.Items[0].Should().Be(Items.Clothes.Leather);
     }
 }

@@ -58,8 +58,8 @@ public class Organizer : IOrganizer
         return bag;
     }
 
-    private static bool IsClothes(string item) => item is "Leather" or "Linen" or "Silk" or "Wool";
-    private static bool IsHerb(string item) => item is "Cherry Blossom" or "Marigold" or "Rose" or "Seaweed";
-    private static bool IsMetal(string item) => item is "Copper" or "Gold" or "Iron" or "Silver";
-    private static bool IsWeapon(string item) => item is "Axe" or "Dagger" or "Mace" or "Sword";
+    private static bool IsClothes(string item) => item is Items.Clothes.Leather or Items.Clothes.Linen or Items.Clothes.Silk or Items.Clothes.Wool;
+    private static bool IsHerb(string item) => item is Items.Herbs.CherryBlossom or Items.Herbs.Marigold or Items.Herbs.Rose or Items.Herbs.Seaweed;
+    private static bool IsMetal(string item) => item is Items.Metals.Copper or Items.Metals.Gold or Items.Metals.Iron or Items.Metals.Silver;
+    private static bool IsWeapon(string item) => item is Items.Weapons.Axe or Items.Weapons.Dagger or Items.Weapons.Mace or Items.Weapons.Sword;
 }

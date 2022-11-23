@@ -16,7 +16,7 @@ public class DuranceShould
         var durance = new Durance(backpack.Object, Organizer.Object);
         
         // Act
-        durance.Find("Leather");
+        durance.Find(Items.Clothes.Leather);
         
         // Assert
         backpack.Verify(mock => mock.AddItem(It.IsAny<string>()), Times.Once);
@@ -66,7 +66,7 @@ public class DuranceShould
         // Arrange
         var backpack = new Mock<IBag>();
         var durance = new Durance(backpack.Object, Organizer.Object);
-        durance.Find("Leather");
+        durance.Find(Items.Clothes.Leather);
         Organizer
             .Setup(x => x.OrganizeItems(It.IsAny<IBag>(), It.IsAny<List<IBag>>()))
             .Callback(() => {})

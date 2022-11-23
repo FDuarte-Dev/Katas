@@ -7,7 +7,7 @@ public class DuranceIT
     private static readonly string OrganizedBags =
         "backpack = ['Cherry Blossom', 'Iron', 'Leather', 'Marigold', 'Silk', 'Wool']" + Environment.NewLine +
         "bag_with_metals_category = ['Copper', 'Copper', 'Copper', 'Gold']";
-    
+
     private readonly StringWriter output;
 
     public DuranceIT()
@@ -15,33 +15,33 @@ public class DuranceIT
         output = new StringWriter();
         Console.SetOut(output);
     }
-    
+
     [Fact]
     public void Story()
-    { 
+    {
         // Arrange
         var backpack = new Backpack();
         var organizer = new Organizer();
         var durance = new Durance(backpack, organizer);
 
-        durance.Find("Leather");
-        durance.Find("Iron");
-        durance.Find("Copper");
-        durance.Find("Marigold");
-        durance.Find("Wool");
-        durance.Find("Gold");
-        durance.Find("Silk");
-        durance.Find("Copper");
+        durance.Find(Items.Clothes.Leather);
+        durance.Find(Items.Metals.Iron);
+        durance.Find(Items.Metals.Copper);
+        durance.Find(Items.Herbs.Marigold);
+        durance.Find(Items.Clothes.Wool);
+        durance.Find(Items.Metals.Gold);
+        durance.Find(Items.Clothes.Silk);
+        durance.Find(Items.Metals.Copper);
 
         var metalBag = new MetalBag();
         durance.AddBag(metalBag);
 
-        durance.Find("Copper");
-        durance.Find("Cherry Blossom");
+        durance.Find(Items.Metals.Copper);
+        durance.Find(Items.Herbs.CherryBlossom);
 
         // Act
         durance.Organize();
-        
+
         // Assert
         durance.ShowBags();
         Assert.Equal(OrganizedBags, output.ToString());

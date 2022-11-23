@@ -53,8 +53,6 @@ c
 	Katas.sln,3/c/3c303448931bab576b5629fc1a2cdf5d7da0203f
 H
 Katas/Bags/IOrganizer.cs,8/1/818b410a1b9edcf119cd5438ac350c73abf84dec
-L
-Katas.Test/Bags/BagShould.cs,c/0/c08b3d17048cc6e0f061c699dbc02306e1b0f151
 @
 Katas/Program.cs,e/d/ed205c47abaa1af47423cfc0f4d6c9ce8a89d269
 H
