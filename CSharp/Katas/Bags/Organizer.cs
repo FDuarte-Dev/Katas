@@ -7,6 +7,7 @@ public class Organizer : IOrganizer
         var items = new List<string>();
         items.AddRange(backpack.Items);
         items.AddRange(bags.SelectMany(x => x.Items).ToList());
+        items.Sort();
 
         backpack.Empty();
         foreach (var bag in bags)

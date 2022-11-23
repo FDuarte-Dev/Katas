@@ -5,6 +5,8 @@ namespace Katas.Test.Bags;
 
 public class OrganizerShould
 {
+    private static readonly Organizer organizer = new ();
+    
     [Fact]
     public void SendItemsToCorrectBag()
     {
@@ -26,8 +28,7 @@ public class OrganizerShould
             new MetalBag(),
             new WeaponBag()
         };
-        var organizer = new Organizer();
-        
+
         // Act
         organizer.OrganizeItems(backpack, bags);
         
@@ -70,7 +71,6 @@ public class OrganizerShould
         {
             new ClothesBag()
         };
-        var organizer = new Organizer();
         
         // Act
         organizer.OrganizeItems(backpack, bags);
@@ -105,7 +105,6 @@ public class OrganizerShould
             new ClothesBag(),
             new ClothesBag()
         };
-        var organizer = new Organizer();
         
         // Act
         organizer.OrganizeItems(backpack, bags);
@@ -120,5 +119,31 @@ public class OrganizerShould
         var secondClothesBag = bags[1];
         secondClothesBag.Items.Should().HaveCount(1);
         secondClothesBag.Items.Should().OnlyContain(x => x == "Leather");
+    }
+
+    [Fact]
+    public void OrganizeAlphabeticallyWithinBags()
+    {
+        // Arrange
+        var backpack = new Backpack()
+        {
+            Items = new List<string>()
+            {
+                "Wool",
+                "Leather",
+                "Cherry Blossom"
+            }
+        };
+        var bags = new List<IBag>();
+        
+        // Act
+        organizer.OrganizeItems(backpack, bags);
+        
+        // Assert
+        backpack.Items.Should().HaveCount(3);
+        
+        backpack.Items[0].Should().Be("Cherry Blossom");
+        backpack.Items[1].Should().Be("Leather");
+        backpack.Items[2].Should().Be("Wool");
     }
 }
