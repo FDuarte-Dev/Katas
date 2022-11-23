@@ -63,9 +63,19 @@ public class DuranceShould
     [Fact]
     public void AddItemToNextAvailableBag()
     {
-        // Arrange
+        var backpack = new Mock<IBag>();
+        backpack.Setup(x => x.AddItem(It.IsAny<string>())).Throws<ItemLimitExceededException>();
+        
+        var durance = new Durance(backpack.Object, Organizer.Object);
+
+        var bag = new Mock<IBag>();
+        durance.AddBag(bag.Object);
+        
         // Act
+        durance.Find(Items.Clothes.Leather);
+        
         // Assert
+        bag.Verify(mock => mock.AddItem(It.IsAny<string>()), Times.Once);
     }
 
     [Fact]

@@ -9,17 +9,12 @@ public class PrinterServiceShould
     private static readonly string BackpackAndMetalString = "backpack = []" + Environment.NewLine +
                                                             "bag_with_metals_category = []" + Environment.NewLine;
 
-    private readonly StringWriter output;
-
-    public PrinterServiceShould()
-    {
-        output = new StringWriter();
-        Console.SetOut(output);
-    }
-
     [Fact]
     public void PrintBag()
     {
+        var output = new StringWriter();
+        Console.SetOut(output);
+        
         var bag = new Backpack()
         {
             Items = Items
@@ -33,6 +28,9 @@ public class PrinterServiceShould
     [Fact]
     public void PrintBags()
     {
+        var output = new StringWriter();
+        Console.SetOut(output);
+        
         var bags = new List<IBag>
         {
             new Backpack(),

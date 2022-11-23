@@ -13,7 +13,7 @@ public static class Items
     public static class Herbs
     {
         public const string CherryBlossom = "Cherry Blossom";
-        public const string Marigold = "Marigol";
+        public const string Marigold = "Marigold";
         public const string Rose = "Rose";
         public const string Seaweed = "Seaweed";
     }

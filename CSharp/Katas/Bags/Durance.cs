@@ -19,7 +19,25 @@ public class Durance
 
     public void Find(string item)
     {
-        Backpack.AddItem(item);
+        try
+        {
+            Backpack.AddItem(item);
+        }
+        catch (ItemLimitExceededException)
+        {
+            foreach (var bag in Bags)
+            {
+                try
+                {
+                    bag.AddItem(item);
+                    break;
+                }
+                catch (ItemLimitExceededException)
+                {
+                    // continue
+                }
+            }
+        }
     }
 
     public void Organize()
