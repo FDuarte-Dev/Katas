@@ -15,7 +15,8 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
+		result.InvalidationResults.Should().Contain(InvalidationResult.NotEnoughPasswordLenght);
 	}
 
 	[Fact]
@@ -28,7 +29,8 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
+		result.InvalidationResults.Should().Contain(InvalidationResult.DoesNotContainCapitalLetter);
 	}
 
 	[Fact]
@@ -41,7 +43,8 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
+		result.InvalidationResults.Should().Contain(InvalidationResult.DoesNotContainLowerCaseLetter);
 	}
 
 	[Fact]
@@ -54,7 +57,8 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
+		result.InvalidationResults.Should().Contain(InvalidationResult.DoesNotContainNumbers);
 	}
 
 	[Fact]
@@ -67,7 +71,8 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
+		result.InvalidationResults.Should().Contain(InvalidationResult.DoesNotContainUnderscore);
 	}
 
 	[Theory]
@@ -81,7 +86,7 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate2(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
 	}
 	
 	[Theory]
@@ -95,6 +100,6 @@ public class PasswordValidationShould
 		var result = PasswordValidator.Validate3(password);
 		
 		// Assert
-		result.Should().BeFalse();
+		result.IsValid.Should().BeFalse();
 	}
 }

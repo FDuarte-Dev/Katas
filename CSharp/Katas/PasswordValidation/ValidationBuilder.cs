@@ -39,36 +39,66 @@ public class ValidationBuilder
 		_validateUnderscore = true;
 		return this;	}
 
-	public bool Validate(string password)
+	public ValidationResult Validate(string password)
 	{
 		var isValid = true;
+		var invalidationResults = new List<InvalidationResult>();
 		
 		if (_minimumLenght > 0)
 		{
-			isValid &= MinimumNumberOfCharacters(password);
+			var hasNumberOfCharacters = MinimumNumberOfCharacters(password);
+			isValid &= hasNumberOfCharacters;
+			if (!hasNumberOfCharacters)
+			{
+				invalidationResults.Add(InvalidationResult.NotEnoughPasswordLenght);
+			}
 		}
 
 		if (_validateUpperCase)
 		{
-			isValid &= HasACapitalLetter(password);
+			var hasCapitalLetter = HasACapitalLetter(password);
+			isValid &= hasCapitalLetter;
+			if (!hasCapitalLetter)
+			{
+				invalidationResults.Add(InvalidationResult.DoesNotContainCapitalLetter);
+			}
 		}
 
 		if (_validateLowerCase)
 		{
-			isValid &= HasALowerCaseLetter(password);
+			var hasLowerCaseLetter = HasALowerCaseLetter(password);
+			isValid &= hasLowerCaseLetter;
+			if (!hasLowerCaseLetter)
+			{
+				invalidationResults.Add(InvalidationResult.DoesNotContainLowerCaseLetter);
+			}
 		}
 
 		if (_validateNumber)
 		{
-			isValid &= HasANumber(password);
+			var hasNumber = HasANumber(password);
+			isValid &= hasNumber;
+			if (!hasNumber)
+			{
+				invalidationResults.Add(InvalidationResult.DoesNotContainNumbers);
+			}
 		}
 
 		if (_validateUnderscore)
 		{
-			isValid &= HasAnUnderscore(password);
+			var hasUnderscore = HasAnUnderscore(password);
+			isValid &= hasUnderscore;
+			if (!hasUnderscore)
+			{
+				invalidationResults.Add(InvalidationResult.DoesNotContainUnderscore);
+			}
 		}
-
-		return isValid;
+		
+		return new ValidationResult()
+		{
+			IsValid = isValid,
+			InvalidationResults = invalidationResults
+		};
 	}
 	
 	private bool MinimumNumberOfCharacters(string password)

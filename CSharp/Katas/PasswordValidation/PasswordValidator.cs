@@ -2,7 +2,7 @@ namespace Katas.PasswordValidation;
 
 public static class PasswordValidator
 {
-	public static bool Validate(string password)
+	public static ValidationResult Validate(string password)
 	{
 		return new ValidationBuilder()
 			   .WithMinimumCharacters(8)
@@ -13,7 +13,7 @@ public static class PasswordValidator
 			   .Validate(password);
 	}
 	
-	public static bool Validate2(string password)
+	public static ValidationResult Validate2(string password)
 	{
 		return new ValidationBuilder()
 			   .WithMinimumCharacters(6)
@@ -23,7 +23,7 @@ public static class PasswordValidator
 			   .Validate(password);
 	}
 
-	public static bool Validate3(string password)
+	public static ValidationResult Validate3(string password)
 	{
 		return new ValidationBuilder()
 			   .WithMinimumCharacters(16)
