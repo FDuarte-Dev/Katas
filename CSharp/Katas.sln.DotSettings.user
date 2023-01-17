@@ -3,6 +3,12 @@
 	
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=74aea3d8_002Dc6bb_002D4d66_002Daeb5_002D2e1274b3de71/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=74aea3d8_002Dc6bb_002D4d66_002Daeb5_002D2e1274b3de71/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e5fc88c0_002Da5f8_002D4a42_002Da635_002D41535f8cde6c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Namespace&gt;Katas.Test.PasswordValidation&lt;/Namespace&gt;
+    &lt;Project Location="/Users/codurance/repo/training/Katas/CSharp/Katas.Test" Presentation="&amp;lt;test&amp;gt;\&amp;lt;Katas.Test&amp;gt;" /&gt;
+  &lt;/And&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
