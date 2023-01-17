@@ -69,4 +69,32 @@ public class PasswordValidationShould
 		// Assert
 		result.Should().BeFalse();
 	}
+
+	[Theory]
+	[InlineData("12345")]
+	[InlineData("aaaaaa")]
+	[InlineData("AAAAAA")]
+	[InlineData("aaaAAA")]
+	public void InvalidatePasswordsForSecondValidation(string password)
+	{
+		// Act
+		var result = PasswordValidator.Validate2(password);
+		
+		// Assert
+		result.Should().BeFalse();
+	}
+	
+	[Theory]
+	[InlineData("123456789012345")]
+	[InlineData("aaaaaaaaaaaaaaaa")]
+	[InlineData("AAAAAAAAAAAAAAAA")]
+	[InlineData("aaaaaaaaAAAAAAAA")]
+	public void InvalidatePasswordsForThirdValidation(string password)
+	{
+		// Act
+		var result = PasswordValidator.Validate3(password);
+		
+		// Assert
+		result.Should().BeFalse();
+	}
 }

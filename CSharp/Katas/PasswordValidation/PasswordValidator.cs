@@ -1,38 +1,35 @@
 namespace Katas.PasswordValidation;
 
-public class PasswordValidator
+public static class PasswordValidator
 {
 	public static bool Validate(string password)
 	{
-		return HasEightOrMoreCharacters(password) &&
-			   HasACapitalLetter(password) &&
-			   HasALowerCaseLetter(password) &&
-			   HasANumber(password) &&
-			   HasAnUnderscore(password);
+		return new ValidationBuilder()
+			   .WithMinimumCharacters(8)
+			   .WithCapitalLetter()
+			   .WithLowerCaseLetter()
+			   .WithNumber()
+			   .WithUnderScore()
+			   .Validate(password);
+	}
+	
+	public static bool Validate2(string password)
+	{
+		return new ValidationBuilder()
+			   .WithMinimumCharacters(6)
+			   .WithCapitalLetter()
+			   .WithLowerCaseLetter()
+			   .WithNumber()
+			   .Validate(password);
 	}
 
-	private static bool HasEightOrMoreCharacters(string password)
+	public static bool Validate3(string password)
 	{
-		return password.Length >= 8;
-	}
-	
-	private static bool HasACapitalLetter(string password)
-	{
-		return password.Any(char.IsUpper);
-	}
-	
-	private static bool HasALowerCaseLetter(string password)
-	{
-		return password.Any(char.IsLower);
-	}
-	
-	private static bool HasANumber(string password)
-	{
-		return password.Any(char.IsNumber);
-	}
-	
-	private static bool HasAnUnderscore(string password)
-	{
-		return password.Any(c => c.Equals('_'));
+		return new ValidationBuilder()
+			   .WithMinimumCharacters(16)
+			   .WithCapitalLetter()
+			   .WithLowerCaseLetter()
+			   .WithUnderScore()
+			   .Validate(password);
 	}
 }
