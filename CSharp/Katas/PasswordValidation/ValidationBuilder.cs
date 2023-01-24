@@ -1,3 +1,5 @@
+using Katas.PasswordValidation.Validators;
+
 namespace Katas.PasswordValidation;
 
 public class ValidationBuilder
@@ -7,7 +9,7 @@ public class ValidationBuilder
 	private bool _validateLowerCase;
 	private bool _validateNumber;
 	private bool _validateUnderscore;
-	
+
 
 	public ValidationBuilder WithMinimumCharacters(int minimumCharacter)
 	{
@@ -25,7 +27,7 @@ public class ValidationBuilder
 	{
 		_validateLowerCase = true;
 		return this;
-		
+
 	}
 
 	public ValidationBuilder WithNumber()
@@ -33,96 +35,54 @@ public class ValidationBuilder
 		_validateNumber = true;
 		return this;
 	}
-	
+
 	public ValidationBuilder WithUnderScore()
 	{
 		_validateUnderscore = true;
-		return this;	}
+		return this;
+	}
 
 	public ValidationResult Validate(string password)
 	{
-		var isValid = true;
 		var invalidationResults = new List<InvalidationResult>();
-		
-		if (_minimumLenght > 0)
-		{
-			var hasNumberOfCharacters = MinimumNumberOfCharacters(password);
-			isValid &= hasNumberOfCharacters;
-			if (!hasNumberOfCharacters)
-			{
-				invalidationResults.Add(InvalidationResult.NotEnoughPasswordLenght);
-			}
-		}
 
-		if (_validateUpperCase)
-		{
-			var hasCapitalLetter = HasACapitalLetter(password);
-			isValid &= hasCapitalLetter;
-			if (!hasCapitalLetter)
-			{
-				invalidationResults.Add(InvalidationResult.DoesNotContainCapitalLetter);
-			}
-		}
+		LenghtValidator.Validate(_minimumLenght, password, invalidationResults);
+		UppercaseValidator.Validate(_validateUpperCase, password, invalidationResults);
+		LowercaseValidator.Validate(_validateLowerCase, password, invalidationResults);
+		NumbersValidator.Validate(_validateNumber, password, invalidationResults);
+		UnderscoreValidator.Validate(_validateUnderscore, password, invalidationResults);
 
-		if (_validateLowerCase)
+		return new ValidationResult
 		{
-			var hasLowerCaseLetter = HasALowerCaseLetter(password);
-			isValid &= hasLowerCaseLetter;
-			if (!hasLowerCaseLetter)
-			{
-				invalidationResults.Add(InvalidationResult.DoesNotContainLowerCaseLetter);
-			}
-		}
-
-		if (_validateNumber)
-		{
-			var hasNumber = HasANumber(password);
-			isValid &= hasNumber;
-			if (!hasNumber)
-			{
-				invalidationResults.Add(InvalidationResult.DoesNotContainNumbers);
-			}
-		}
-
-		if (_validateUnderscore)
-		{
-			var hasUnderscore = HasAnUnderscore(password);
-			isValid &= hasUnderscore;
-			if (!hasUnderscore)
-			{
-				invalidationResults.Add(InvalidationResult.DoesNotContainUnderscore);
-			}
-		}
-		
-		return new ValidationResult()
-		{
-			IsValid = isValid,
+			IsValid = IsValid(invalidationResults),
 			InvalidationResults = invalidationResults
 		};
 	}
-	
-	private bool MinimumNumberOfCharacters(string password)
+
+	private static bool IsValid(List<InvalidationResult> invalidationResults)
 	{
-		return password.Length >= _minimumLenght;
+		return !invalidationResults.Any();
 	}
-	
-	private static bool HasACapitalLetter(string password)
+
+	public ValidationResult Validate4(string password)
 	{
-		return password.Any(char.IsUpper);
+		var invalidationResults = new List<InvalidationResult>();
+
+		LenghtValidator.Validate(_minimumLenght, password, invalidationResults);
+		UppercaseValidator.Validate(_validateUpperCase, password, invalidationResults);
+		LowercaseValidator.Validate(_validateLowerCase, password, invalidationResults);
+		NumbersValidator.Validate(_validateNumber, password, invalidationResults);
+		UnderscoreValidator.Validate(_validateUnderscore, password, invalidationResults);
+
+		return new ValidationResult
+		{
+			IsValid = IsValid4(invalidationResults),
+			InvalidationResults = invalidationResults
+		};
 	}
-	
-	private static bool HasALowerCaseLetter(string password)
+
+	private static bool IsValid4(List<InvalidationResult> invalidationResults)
 	{
-		return password.Any(char.IsLower);
-	}
-	
-	private static bool HasANumber(string password)
-	{
-		return password.Any(char.IsNumber);
-	}
-	
-	private static bool HasAnUnderscore(string password)
-	{
-		return password.Any(c => c.Equals('_'));
+		return invalidationResults.Count <= 1;
 	}
 }

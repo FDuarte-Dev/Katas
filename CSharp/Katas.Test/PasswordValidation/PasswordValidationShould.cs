@@ -102,4 +102,18 @@ public class PasswordValidationShould
 		// Assert
 		result.IsValid.Should().BeFalse();
 	}
+	
+	[Fact]
+	public void ValidatePasswordWithOneValidationError()
+	{
+		// Arrange
+		const string password = "A23456789";
+
+		// Act
+		var result = PasswordValidator.Validate4(password);
+		
+		// Assert
+		result.IsValid.Should().BeTrue();
+		result.InvalidationResults.Should().Contain(InvalidationResult.DoesNotContainUnderscore);
+	}
 }

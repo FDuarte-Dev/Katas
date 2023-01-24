@@ -32,4 +32,14 @@ public static class PasswordValidator
 			   .WithUnderScore()
 			   .Validate(password);
 	}
+
+	public static ValidationResult Validate4(string password)
+	{
+		return new ValidationBuilder()
+			   .WithMinimumCharacters(9)
+			   .WithCapitalLetter()
+			   .WithNumber()
+			   .WithUnderScore()
+			   .Validate4(password);
+	}
 }
