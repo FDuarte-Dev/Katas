@@ -94,4 +94,5 @@ CSharp/Katas.Test/obj/*
 /CSharp/**/bin/
 /CSharp/**/obj/
 /CSharp/.idea
+/CSharp/.idea/*
 /CSharp/Katas.sln.DotSettings.user
