@@ -24,11 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="UnitTest1.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Katalyst\Katalyst.csproj" />
+      <ProjectReference Include="..\Codewars\Codewars.csproj" />
     </ItemGroup>
 
 </Project>
